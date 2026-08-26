@@ -1,0 +1,47 @@
+{
+  "info": {
+    "name": "Vagamundo API (PEC 3)",
+    "description": "Colección para probar el CRUD de viajes. Importable en Postman o Thunder Client. Cambia la variable {{base}} por tu URL local o la de Vercel.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base", "value": "http://localhost:4000" },
+    { "key": "id", "value": "REEMPLAZA_POR_UN_ID" }
+  ],
+  "item": [
+    {
+      "name": "Estado de la API",
+      "request": { "method": "GET", "url": { "raw": "{{base}}/", "host": ["{{base}}"], "path": [""] } }
+    },
+    {
+      "name": "Listar viajes",
+      "request": { "method": "GET", "url": { "raw": "{{base}}/api/travels", "host": ["{{base}}"], "path": ["api", "travels"] } }
+    },
+    {
+      "name": "Obtener un viaje",
+      "request": { "method": "GET", "url": { "raw": "{{base}}/api/travels/{{id}}", "host": ["{{base}}"], "path": ["api", "travels", "{{id}}"] } }
+    },
+    {
+      "name": "Crear viaje",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"nombre\": \"Viaje de prueba\",\n  \"destino\": \"Lisboa\",\n  \"precio\": 350,\n  \"duracionDias\": 4,\n  \"categoria\": \"cultural\",\n  \"disponible\": true\n}" },
+        "url": { "raw": "{{base}}/api/travels", "host": ["{{base}}"], "path": ["api", "travels"] }
+      }
+    },
+    {
+      "name": "Actualizar viaje",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"precio\": 400,\n  \"disponible\": false\n}" },
+        "url": { "raw": "{{base}}/api/travels/{{id}}", "host": ["{{base}}"], "path": ["api", "travels", "{{id}}"] }
+      }
+    },
+    {
+      "name": "Eliminar viaje",
+      "request": { "method": "DELETE", "url": { "raw": "{{base}}/api/travels/{{id}}", "host": ["{{base}}"], "path": ["api", "travels", "{{id}}"] } }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+### Pruebas de la API con la extensión REST Client (archivo .http)
+### Cambia {{base}} por tu URL de Vercel cuando pruebes el despliegue.
+
+@base = http://localhost:4000
+
+### 1. Comprobar que la API responde
+GET {{base}}/
+
+### 2. Listar todos los viajes
+GET {{base}}/api/travels
+
+### 3. Obtener un viaje por id
+GET {{base}}/api/travels/REEMPLAZA_POR_UN_ID
+
+### 4. Crear un viaje
+POST {{base}}/api/travels
+Content-Type: application/json
+
+{
+  "nombre": "Viaje de prueba",
+  "descripcion": "Creado desde requests.http",
+  "destino": "Lisboa",
+  "precio": 350,
+  "duracionDias": 4,
+  "categoria": "cultural",
+  "disponible": true
+}
+
+### 5. Actualizar un viaje
+PUT {{base}}/api/travels/REEMPLAZA_POR_UN_ID
+Content-Type: application/json
+
+{
+  "precio": 400,
+  "disponible": false
+}
+
+### 6. Eliminar un viaje
+DELETE {{base}}/api/travels/REEMPLAZA_POR_UN_ID
