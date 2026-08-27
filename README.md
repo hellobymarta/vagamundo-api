@@ -17,8 +17,9 @@ flowchart LR
     App -.->|error| EH[middleware 500]
 ```
 
-## Estructura 
+## Estructura
 
+```
 PEC3/
 ├── server.js                          # arranque (local) y export para Vercel
 ├── vercel.json                        # configuración de despliegue
@@ -32,7 +33,7 @@ PEC3/
     ├── controllers/           # lógica del CRUD
     ├── routes/                # endpoints de la API
     └── middlewares/           # notFound (404) y errorHandler (500)
-
+```
 
 
 ## Modelos
