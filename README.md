@@ -88,4 +88,4 @@ Archivos de pruebas incluidos (obligatorios):
 3. Añade la variable de entorno `MONGODB_URI` en **Settings → Environment Variables**.
 4. Despliega y comprueba que la URL pública responde y se conecta a **MongoDB Atlas**.
 
-**URL desplegada:** _(pendiente de añadir tras el despliegue)_
+**URL desplegada:** https://vagamundo-api.vercel.app
