@@ -1,7 +1,7 @@
 {
-  "name": "catalogo-api",
+  "name": "vagamundo-api",
   "version": "1.0.0",
-  "description": "API REST de ejemplo (catálogo de productos) con Node, Express y MongoDB.",
+  "description": "API REST de Vagamundo (catálogo de viajes) con Node, Express y MongoDB Atlas.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

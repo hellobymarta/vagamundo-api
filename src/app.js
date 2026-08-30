@@ -13,7 +13,7 @@ app.use(express.json());    // entiende cuerpos JSON
 
 // Ruta de salud (comprueba que la API responde)
 app.get("/", (req, res) => {
-  res.json({ ok: true, mensaje: "API del catálogo en funcionamiento" });
+  res.json({ ok: true, mensaje: "API de Vagamundo en funcionamiento" });
 });
 
 // Rutas de la API
