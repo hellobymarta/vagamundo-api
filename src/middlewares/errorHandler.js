@@ -1,7 +1,9 @@
+const debug = require("debug")("vagamundo:error");
+
 // Middleware 500: gestor central de errores.
 // Express lo reconoce porque recibe 4 parámetros (err, req, res, next).
 function errorHandler(err, req, res, next) {
-  console.error(err);
+  debug(err);
 
   // ID de Mongo con formato incorrecto
   if (err.name === "CastError") {

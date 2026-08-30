@@ -90,3 +90,17 @@ Archivos de pruebas incluidos (obligatorios):
 4. Despliega y comprueba que la URL pública responde y se conecta a **MongoDB Atlas**.
 
 **URL desplegada:** https://vagamundo-api.vercel.app
+
+## Middlewares y utilidades
+
+- **helmet** — cabeceras HTTP de seguridad.
+- **morgan** — log de cada petición por consola, en lugar de `console.log`.
+- **debug** — trazas internas (conexión a Mongo, errores, arranque del servidor).
+  Se activan con la variable de entorno `DEBUG`:
+
+  ```bash
+  DEBUG=vagamundo:* npm run dev
+  ```
+
+- **notFound** — middleware de 404, asignado al router de viajes y a la app.
+- **errorHandler** — middleware de 500, asignado al router de viajes y a la app.

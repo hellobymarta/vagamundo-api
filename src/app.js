@@ -1,5 +1,7 @@
 const express = require("express");
 const cors = require("cors");
+const helmet = require("helmet");
+const morgan = require("morgan");
 
 const travelRoutes = require("./routes/travel.routes");
 const notFound = require("./middlewares/notFound");
@@ -8,6 +10,8 @@ const errorHandler = require("./middlewares/errorHandler");
 const app = express();
 
 // Middlewares globales
+app.use(helmet());          // cabeceras HTTP de seguridad
+app.use(morgan("dev"));     // log de cada petición (en vez de console.log)
 app.use(cors());            // permite peticiones desde el frontend
 app.use(express.json());    // entiende cuerpos JSON
 

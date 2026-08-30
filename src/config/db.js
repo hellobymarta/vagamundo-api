@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const debug = require("debug")("vagamundo:db");
 
 // Conecta a MongoDB Atlas. Reutiliza la conexión si ya está abierta
 // (importante en entornos serverless como Vercel).
@@ -11,7 +12,7 @@ async function connectDB(uri) {
   }
   mongoose.set("strictQuery", true);
   await mongoose.connect(uri);
-  console.log("Conectado a MongoDB Atlas");
+  debug("Conectado a MongoDB Atlas");
   return mongoose.connection;
 }
 
