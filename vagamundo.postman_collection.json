@@ -1,47 +1,757 @@
 {
   "info": {
-    "name": "Vagamundo API (PEC 3)",
-    "description": "Colección para probar el CRUD de viajes. Importable en Postman o Thunder Client. Cambia la variable {{base}} por tu URL local o la de Vercel.",
+    "name": "Vagamundo API",
+    "description": "Colección para probar la API de Vagamundo: sesión, catálogo de viajes, diario, reservas y panel. Empieza por «Entrar»: su script guarda el token en la variable {{token}} y el resto de peticiones ya lo usan. Cambia {{base}} por la URL de Vercel para probar el despliegue.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
-    { "key": "base", "value": "http://localhost:4000" },
-    { "key": "id", "value": "REEMPLAZA_POR_UN_ID" }
+    {
+      "key": "base",
+      "value": "http://localhost:4000"
+    },
+    {
+      "key": "token",
+      "value": ""
+    },
+    {
+      "key": "id",
+      "value": "REEMPLAZA_POR_UN_ID"
+    }
   ],
   "item": [
     {
-      "name": "Estado de la API",
-      "request": { "method": "GET", "url": { "raw": "{{base}}/", "host": ["{{base}}"], "path": [""] } }
+      "name": "Sesión",
+      "item": [
+        {
+          "name": "Estado de la API",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                ""
+              ]
+            },
+            "description": "Comprueba que la API responde. No toca la base de datos."
+          }
+        },
+        {
+          "name": "Entrar",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/auth/login",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            },
+            "description": "Devuelve el token de sesión y lo guarda en {{token}}.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"marta@vagamundo.es\",\n  \"password\": \"vagamundo2026\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// Guarda el token en la variable de la colección para no copiarlo a mano.",
+                  "const datos = pm.response.json();",
+                  "if (datos.token) pm.collectionVariables.set('token', datos.token);",
+                  "pm.test('Entra y devuelve token', () => pm.expect(datos.token).to.be.a('string'));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Entrar con contraseña incorrecta",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/auth/login",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            },
+            "description": "Debe devolver 401.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"marta@vagamundo.es\",\n  \"password\": \"otra-cosa\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Crear cuenta",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/auth/register",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Cuenta de prueba\",\n  \"email\": \"prueba@vagamundo.es\",\n  \"password\": \"contrasena123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Comprobar la sesión",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/auth/me",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "me"
+              ]
+            },
+            "description": ""
+          }
+        }
+      ]
     },
     {
-      "name": "Listar viajes",
-      "request": { "method": "GET", "url": { "raw": "{{base}}/api/travels", "host": ["{{base}}"], "path": ["api", "travels"] } }
+      "name": "Catálogo de viajes",
+      "item": [
+        {
+          "name": "Listar viajes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/travels",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "travels"
+              ]
+            },
+            "description": "Público."
+          }
+        },
+        {
+          "name": "Filtrar por destino",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/travels?destino=Islandia",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "travels?destino=Islandia"
+              ]
+            },
+            "description": ""
+          }
+        },
+        {
+          "name": "Obtener un viaje",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/travels/{{id}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "travels",
+                "{{id}}"
+              ]
+            },
+            "description": ""
+          }
+        },
+        {
+          "name": "Crear viaje",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/travels",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "travels"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Islandia en invierno\",\n  \"descripcion\": \"Ocho días por el sur de la isla.\",\n  \"destino\": \"Islandia\",\n  \"precio\": 2450,\n  \"duracionDias\": 8,\n  \"plazas\": 12,\n  \"categoria\": \"naturaleza\",\n  \"disponible\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Crear viaje sin sesión",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/travels",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "travels"
+              ]
+            },
+            "description": "Debe devolver 401.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Esto no se debe guardar\",\n  \"destino\": \"Ninguno\",\n  \"precio\": 100,\n  \"duracionDias\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Actualizar viaje",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/travels/{{id}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "travels",
+                "{{id}}"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"precio\": 2600,\n  \"disponible\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Eliminar viaje",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/travels/{{id}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "travels",
+                "{{id}}"
+              ]
+            },
+            "description": ""
+          }
+        }
+      ]
     },
     {
-      "name": "Obtener un viaje",
-      "request": { "method": "GET", "url": { "raw": "{{base}}/api/travels/{{id}}", "host": ["{{base}}"], "path": ["api", "travels", "{{id}}"] } }
+      "name": "Diario",
+      "item": [
+        {
+          "name": "Listar crónicas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/posts?pagina=1",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "posts?pagina=1"
+              ]
+            },
+            "description": "Público y paginado."
+          }
+        },
+        {
+          "name": "Una crónica",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/posts/{{id}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "posts",
+                "{{id}}"
+              ]
+            },
+            "description": ""
+          }
+        },
+        {
+          "name": "Publicar crónica",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/posts",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "posts"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"titulo\": \"Una mañana en Ajloun\",\n  \"destino\": \"Jordania\",\n  \"contenido\": \"Un castillo del siglo XII a una hora de Ammán.\",\n  \"imagen\": \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Comentar",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/posts/{{id}}/comments",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "posts",
+                "{{id}}",
+                "comments"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"texto\": \"Apuntado para el próximo viaje.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Editar comentario",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/comments/{{id}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "comments",
+                "{{id}}"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"texto\": \"Corregido: lo dejo para septiembre.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Borrar comentario",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/comments/{{id}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "comments",
+                "{{id}}"
+              ]
+            },
+            "description": ""
+          }
+        }
+      ]
     },
     {
-      "name": "Crear viaje",
-      "request": {
-        "method": "POST",
-        "header": [{ "key": "Content-Type", "value": "application/json" }],
-        "body": { "mode": "raw", "raw": "{\n  \"nombre\": \"Viaje de prueba\",\n  \"destino\": \"Lisboa\",\n  \"precio\": 350,\n  \"duracionDias\": 4,\n  \"categoria\": \"cultural\",\n  \"disponible\": true\n}" },
-        "url": { "raw": "{{base}}/api/travels", "host": ["{{base}}"], "path": ["api", "travels"] }
-      }
+      "name": "Reservas y panel",
+      "item": [
+        {
+          "name": "Mis reservas",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/bookings",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ]
+            },
+            "description": ""
+          }
+        },
+        {
+          "name": "Reservar plazas",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/bookings",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"viaje\": \"{{id}}\",\n  \"personas\": 2,\n  \"notas\": \"Preferimos habitaciones separadas.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Cambiar personas",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/bookings/{{id}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "{{id}}"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"personas\": 3\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Anular reserva",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/bookings/{{id}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "{{id}}"
+              ]
+            },
+            "description": ""
+          }
+        },
+        {
+          "name": "Números de la agencia",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/stats",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "stats"
+              ]
+            },
+            "description": ""
+          }
+        }
+      ]
     },
     {
-      "name": "Actualizar viaje",
-      "request": {
-        "method": "PUT",
-        "header": [{ "key": "Content-Type", "value": "application/json" }],
-        "body": { "mode": "raw", "raw": "{\n  \"precio\": 400,\n  \"disponible\": false\n}" },
-        "url": { "raw": "{{base}}/api/travels/{{id}}", "host": ["{{base}}"], "path": ["api", "travels", "{{id}}"] }
-      }
-    },
-    {
-      "name": "Eliminar viaje",
-      "request": { "method": "DELETE", "url": { "raw": "{{base}}/api/travels/{{id}}", "host": ["{{base}}"], "path": ["api", "travels", "{{id}}"] } }
+      "name": "Errores controlados",
+      "item": [
+        {
+          "name": "Ruta que no existe",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/loquesea",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "loquesea"
+              ]
+            },
+            "description": "404 del middleware notFound."
+          }
+        },
+        {
+          "name": "Id con mala forma",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/travels/pepito",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "travels",
+                "pepito"
+              ]
+            },
+            "description": "400 del middleware errorHandler."
+          }
+        },
+        {
+          "name": "Id que no existe",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/travels/000000000000000000000000",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "travels",
+                "000000000000000000000000"
+              ]
+            },
+            "description": "404."
+          }
+        }
+      ]
     }
   ]
 }

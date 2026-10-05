@@ -3,17 +3,13 @@ const express = require("express");
 const notFound = require("../middlewares/not-found");
 const errorHandler = require("../middlewares/error-handler");
 
-const ctrl = require("../controllers/travel.controller");
+const ctrl = require("../controllers/comment.controller");
 const { requireAuth } = require("../middlewares/require-auth");
 
 const router = express.Router();
 
-// Leer el catálogo es público; crear, editar y borrar piden sesión.
-router.get("/", ctrl.getTravels);                      // GET    /api/travels
-router.get("/:id", ctrl.getTravel);                    // GET    /api/travels/:id
-router.post("/", requireAuth, ctrl.createTravel);      // POST   /api/travels
-router.put("/:id", requireAuth, ctrl.updateTravel);    // PUT    /api/travels/:id
-router.delete("/:id", requireAuth, ctrl.deleteTravel); // DELETE /api/travels/:id
+router.put("/:id", requireAuth, ctrl.updateComment);    // PUT    /api/comments/:id
+router.delete("/:id", requireAuth, ctrl.deleteComment); // DELETE /api/comments/:id
 
 // Los middlewares de 404 y 500 van también aquí, al final del router, además
 // de al final de app.js. Así una dirección que empieza por este prefijo pero

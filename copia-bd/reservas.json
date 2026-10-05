@@ -1,0 +1,24 @@
+[
+  {
+    "_id": "6abf863db97cd27c4810beef",
+    "viaje": "6a8c60d8a076aef3f7631469",
+    "usuario": "6abf863bb97cd27c4810bed2",
+    "personas": 2,
+    "notas": "Reserva de ejemplo para ver el panel con datos.",
+    "estado": "confirmada",
+    "createdAt": "2026-10-02T10:23:57.053Z",
+    "updatedAt": "2026-10-02T10:23:57.053Z",
+    "__v": 0
+  },
+  {
+    "_id": "6abf863db97cd27c4810bef1",
+    "viaje": "6a8c60d8a076aef3f763146a",
+    "usuario": "6abf863bb97cd27c4810bed7",
+    "personas": 3,
+    "notas": "Reserva de ejemplo para ver el panel con datos.",
+    "estado": "confirmada",
+    "createdAt": "2026-10-02T10:23:57.080Z",
+    "updatedAt": "2026-10-02T10:23:57.080Z",
+    "__v": 0
+  }
+]

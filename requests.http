@@ -1,39 +1,186 @@
-### Pruebas de la API con la extensión REST Client (archivo .http)
-### Cambia {{base}} por tu URL de Vercel cuando pruebes el despliegue.
+### Pruebas de la API de Vagamundo con la extensión REST Client.
+### Cambia {{base}} por la URL de Vercel cuando quieras probar el despliegue.
+###
+### El orden importa: primero el login, porque de ahí sale el token que usan
+### las peticiones que cambian datos. REST Client lo coge solo de la respuesta
+### gracias al nombre que le he puesto a esa petición (# @name login).
 
 @base = http://localhost:4000
+@id = REEMPLAZA_POR_UN_ID
 
 ### 1. Comprobar que la API responde
 GET {{base}}/
 
-### 2. Listar todos los viajes
+### 2. Entrar con una de las cuentas de ejemplo
+# @name login
+POST {{base}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "marta@vagamundo.es",
+  "password": "vagamundo2026"
+}
+
+### A partir de aquí, el token sale de la respuesta anterior
+@token = {{login.response.body.token}}
+
+### 3. Comprobar que la sesión sigue valiendo
+GET {{base}}/api/auth/me
+Authorization: Bearer {{token}}
+
+### 4. Crear una cuenta nueva
+POST {{base}}/api/auth/register
+Content-Type: application/json
+
+{
+  "nombre": "Cuenta de prueba",
+  "email": "prueba@vagamundo.es",
+  "password": "contrasena123"
+}
+
+### --------------------------------------------------------------------
+### Catálogo de viajes
+### --------------------------------------------------------------------
+
+### 5. Listar todos los viajes (público)
 GET {{base}}/api/travels
 
-### 3. Obtener un viaje por id
-GET {{base}}/api/travels/REEMPLAZA_POR_UN_ID
+### 6. Filtrar por destino y precio máximo
+GET {{base}}/api/travels?destino=Islandia&maxPrecio=3000
 
-### 4. Crear un viaje
+### 7. Obtener un viaje por id (público)
+GET {{base}}/api/travels/{{id}}
+
+### 8. Crear un viaje (pide sesión)
+POST {{base}}/api/travels
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "nombre": "Islandia en invierno",
+  "descripcion": "Ocho días recorriendo el sur de la isla en grupo pequeño.",
+  "destino": "Islandia",
+  "precio": 2450,
+  "duracionDias": 8,
+  "plazas": 12,
+  "categoria": "naturaleza",
+  "disponible": true
+}
+
+### 9. Crear un viaje sin sesión (debe devolver 401)
 POST {{base}}/api/travels
 Content-Type: application/json
 
 {
-  "nombre": "Viaje de prueba",
-  "descripcion": "Creado desde requests.http",
-  "destino": "Lisboa",
-  "precio": 350,
-  "duracionDias": 4,
-  "categoria": "cultural",
-  "disponible": true
+  "nombre": "Esto no se debe guardar",
+  "destino": "Ninguno",
+  "precio": 100,
+  "duracionDias": 2
 }
 
-### 5. Actualizar un viaje
-PUT {{base}}/api/travels/REEMPLAZA_POR_UN_ID
+### 10. Actualizar un viaje (pide sesión)
+PUT {{base}}/api/travels/{{id}}
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
-  "precio": 400,
+  "precio": 2600,
   "disponible": false
 }
 
-### 6. Eliminar un viaje
-DELETE {{base}}/api/travels/REEMPLAZA_POR_UN_ID
+### 11. Eliminar un viaje (pide sesión)
+DELETE {{base}}/api/travels/{{id}}
+Authorization: Bearer {{token}}
+
+### --------------------------------------------------------------------
+### Diario de viajes
+### --------------------------------------------------------------------
+
+### 12. Listar las crónicas con sus comentarios (público, paginado)
+GET {{base}}/api/posts?pagina=1
+
+### 13. Una crónica concreta (público)
+GET {{base}}/api/posts/{{id}}
+
+### 14. Publicar una crónica (pide sesión y fotografía en Base64)
+POST {{base}}/api/posts
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "titulo": "Una mañana en Ajloun",
+  "destino": "Jordania",
+  "contenido": "Un castillo del siglo XII en lo alto de una colina, a una hora de Ammán.",
+  "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg=="
+}
+
+### 15. Comentar una crónica (pide sesión)
+POST {{base}}/api/posts/{{id}}/comments
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "texto": "Apuntado para el próximo viaje."
+}
+
+### 16. Editar un comentario propio
+PUT {{base}}/api/comments/{{id}}
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "texto": "Corregido: lo dejo para septiembre."
+}
+
+### 17. Borrar un comentario propio
+DELETE {{base}}/api/comments/{{id}}
+Authorization: Bearer {{token}}
+
+### --------------------------------------------------------------------
+### Reservas y panel
+### --------------------------------------------------------------------
+
+### 18. Mis reservas (pide sesión)
+GET {{base}}/api/bookings
+Authorization: Bearer {{token}}
+
+### 19. Reservar plazas en un viaje
+POST {{base}}/api/bookings
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "viaje": "{{id}}",
+  "personas": 2,
+  "notas": "Preferimos habitaciones separadas."
+}
+
+### 20. Cambiar el número de personas de una reserva propia
+PUT {{base}}/api/bookings/{{id}}
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "personas": 3
+}
+
+### 21. Anular una reserva propia
+DELETE {{base}}/api/bookings/{{id}}
+Authorization: Bearer {{token}}
+
+### 22. Los números de la agencia (pide sesión)
+GET {{base}}/api/stats
+Authorization: Bearer {{token}}
+
+### --------------------------------------------------------------------
+### Errores que deben salir controlados
+### --------------------------------------------------------------------
+
+### 23. Ruta que no existe (404 del middleware notFound)
+GET {{base}}/api/loquesea
+
+### 24. Id con formato que no es de Mongo (400 del middleware errorHandler)
+GET {{base}}/api/travels/pepito
+
+### 25. Id con buen formato pero que no existe (404)
+GET {{base}}/api/travels/000000000000000000000000

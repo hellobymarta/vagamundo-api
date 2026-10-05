@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "6abf863cb97cd27c4810bedf",
+    "texto": "Estuvimos en marzo y había nieve hasta el sendero. Merece la pena ir con botas.",
+    "post": "6abf863cb97cd27c4810bedd",
+    "autor": "6abf863bb97cd27c4810bed7",
+    "createdAt": "2026-10-02T10:23:56.222Z",
+    "updatedAt": "2026-10-02T10:23:56.222Z",
+    "__v": 0
+  },
+  {
+    "_id": "6abf863cb97cd27c4810bee3",
+    "texto": "Lo de madrugar es el mejor consejo que he leído de Kioto.",
+    "post": "6abf863cb97cd27c4810bee1",
+    "autor": "6abf863bb97cd27c4810beda",
+    "createdAt": "2026-10-02T10:23:56.377Z",
+    "updatedAt": "2026-10-02T10:23:56.377Z",
+    "__v": 0
+  },
+  {
+    "_id": "6abf863cb97cd27c4810bee5",
+    "texto": "Nosotros fuimos en noviembre y los arces compensan de sobra el no ver cerezos.",
+    "post": "6abf863cb97cd27c4810bee1",
+    "autor": "6abf863bb97cd27c4810bed2",
+    "createdAt": "2026-10-02T10:23:56.405Z",
+    "updatedAt": "2026-10-02T10:23:56.405Z",
+    "__v": 0
+  },
+  {
+    "_id": "6abf863cb97cd27c4810bee9",
+    "texto": "Apuntado para el próximo viaje, no lo tenía ni en la lista.",
+    "post": "6abf863cb97cd27c4810bee7",
+    "autor": "6abf863bb97cd27c4810bed2",
+    "createdAt": "2026-10-02T10:23:56.771Z",
+    "updatedAt": "2026-10-02T10:23:56.771Z",
+    "__v": 0
+  }
+]

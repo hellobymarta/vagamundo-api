@@ -1,0 +1,29 @@
+[
+  {
+    "_id": "6abf863bb97cd27c4810bed2",
+    "nombre": "Marta Alarcón",
+    "email": "marta@vagamundo.es",
+    "rol": "admin",
+    "createdAt": "2026-10-02T10:23:55.499Z",
+    "updatedAt": "2026-10-02T10:23:55.499Z",
+    "__v": 0
+  },
+  {
+    "_id": "6abf863bb97cd27c4810bed7",
+    "nombre": "Nerea Ortiz",
+    "email": "nerea@vagamundo.es",
+    "rol": "editor",
+    "createdAt": "2026-10-02T10:23:55.837Z",
+    "updatedAt": "2026-10-02T10:23:55.837Z",
+    "__v": 0
+  },
+  {
+    "_id": "6abf863bb97cd27c4810beda",
+    "nombre": "Lucía Ferrer",
+    "email": "lucia@vagamundo.es",
+    "rol": "editor",
+    "createdAt": "2026-10-02T10:23:55.966Z",
+    "updatedAt": "2026-10-02T10:23:55.966Z",
+    "__v": 0
+  }
+]
