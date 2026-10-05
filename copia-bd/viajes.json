@@ -11,7 +11,8 @@
     "categoria": "playa",
     "disponible": true,
     "createdAt": "2026-01-15T10:00:00.000Z",
-    "updatedAt": "2026-09-12T12:28:03.059Z"
+    "updatedAt": "2026-10-05T08:59:20.569Z",
+    "plazas": 8
   },
   {
     "_id": "6a8c60d8a076aef3f763146a",
@@ -25,7 +26,8 @@
     "categoria": "aventura",
     "disponible": true,
     "createdAt": "2026-01-16T12:20:00.000Z",
-    "updatedAt": "2026-09-12T12:28:02.749Z"
+    "updatedAt": "2026-10-05T08:59:20.598Z",
+    "plazas": 8
   },
   {
     "_id": "6a8c60d8a076aef3f763146b",
@@ -39,21 +41,23 @@
     "categoria": "cultural",
     "disponible": true,
     "createdAt": "2026-01-20T08:45:00.000Z",
-    "updatedAt": "2026-09-12T12:28:02.436Z"
+    "updatedAt": "2026-10-05T08:59:20.627Z",
+    "plazas": 8
   },
   {
     "_id": "6a8c60d8a076aef3f763146c",
     "nombre": "Polinesia Francesa: un paraíso remoto",
-    "descripcion": "Nueve días y cuatro islas, de Moorea a las Tuamotu: los marae de Taputapuatea al atardecer, la vainilla y las perlas de Taha’a, y el paso sur de Fakarava, donde el CNRS ha contado cerca de setecientos tiburones grises en un kilómetro de canal.",
+    "descripcion": "Nueve días y seis islas, de Moorea a las Tuamotu: los marae de Taputapuatea al atardecer, la vainilla y las perlas de Taha’a, y el paso sur de Fakarava, donde el CNRS ha contado cerca de setecientos tiburones grises en un kilómetro de canal.",
     "destino": "Polinesia Francesa",
     "precio": 6100,
     "duracionDias": 9,
     "itinerario": "Día 1 · Llegada a Papeete con trece horas de desfase en contra, así que el primer día es de aclimatación y está pensado como tal: el Museo de Tahití y las Islas, un baño en la costa oeste y cena en las roulottes de la plaza Vai’ete.\nDía 2 · Mercado de Papeete con la primera luz, que además es la hora a la que el jet lag deja despierto a todo el mundo. Ferry a Moorea y vuelta a la isla: las bahías de Cook y Opunohu, los marae del valle y el Belvédère al atardecer, con el Rotui en medio.\nDía 3 · Lagón de Moorea en lancha: rayas látigo y tiburones de puntas negras en un metro de agua y esnórquel en los jardines de coral. De julio a noviembre, la salida se convierte en avistamiento de ballena jorobada con prestador homologado, a cien metros y en rumbo paralelo, como manda la ley. Por la noche, ma’a Tahiti cocinado en horno de tierra con una familia.\nDía 4 · Vuelo a Huahine, cuarenta minutos. Tarde en Maeva, con guía local: los marae junto al lago Fauna Nui, el museo del Fare Pote’e y las trampas de pesca de piedra en uve, que siguen funcionando. Al caer la tarde, las anguilas de ojos azules de Faie.\nDía 5 · Vuelta a Huahine por la carretera de costa y vuelo corto a Raiatea. Taputapuatea al atardecer, cuando baja la luz y se queda vacío: mil años de civilización maohi y el paso sagrado de Te Ava Mo’a, por donde entraban las canoas que llegaban de las islas lejanas. Travesía a Taha’a por el lagón.\nDía 6 · Taha’a: una plantación de vainilla, con la polinización a mano y el curado de hasta nueve meses, y una granja perlera familiar donde se aprende a leer una perla antes de comprarla. Deriva en apnea por el Jardín de Coral, entre los motu Tautau y Maharare, en poco más de un metro de agua. Bora Bora se ve en el horizonte.\nDía 7 · Vuelo a Fakarava vía Papeete. El cambio de escala se nota de golpe: de montañas de setecientos metros a una franja de coral de trescientos metros de ancho, con el océano a un lado y el lagón al otro. Bicicleta por la única carretera y primera puesta de sol de atolón.\nDía 8 · Día completo en el paso sur de Tumakohua, hora y media de lancha hasta Tetamanu. Los titulados bucean a la deriva con la corriente entrante; el resto lo ve en apnea con guía, que se ve igual y no pide título. Comida sobre pilotes y regreso al atardecer.\nDía 9 · Último baño en el lagón, vuelo a Papeete y regreso, cruzando otra vez la línea de cambio de fecha.",
     "imagen": "/polinesia/polinesia-bungalos.jpg",
     "categoria": "playa",
-    "disponible": false,
+    "disponible": true,
     "createdAt": "2026-02-03T09:30:00.000Z",
-    "updatedAt": "2026-09-12T12:28:02.162Z"
+    "updatedAt": "2026-10-04T19:07:18.009Z",
+    "plazas": 8
   },
   {
     "_id": "6aa34299ce9805bd683c4bdf",
@@ -62,28 +66,30 @@
     "destino": "Costa Rica",
     "precio": 4290,
     "duracionDias": 10,
-    "itinerario": "Día 1 · Llegada a San José y noche en el valle central.\nDía 2 · Tortuguero. Vuelo corto y entrada en lancha por los canales.\nDía 3 · Tortuguero al amanecer, cuando bajan los aulladores. Tarde con los biólogos de la estación de tortugas.\nDía 4 · Arenal. Tarde de termales al pie del volcán.\nDía 5 · Puentes colgantes del Arenal y las cuevas del Venado.\nDía 6 · Monteverde. Bosque nuboso por encima de las copas, buscando el quetzal.\nDía 7 · Vuelo a bahía Drake, en la península de Osa.\nDía 8 · Corcovado, estación Sirena. Día completo con guía, que allí es obligatorio.\nDía 9 · Osa. Snorkel en la isla del Caño o mañana libre en la playa.\nDía 10 · Vuelo desde Drake a San José y regreso.",
+    "itinerario": "Día 1 · Llegada a San José y noche en el valle central, a mil doscientos metros, que es donde el cuerpo se acostumbra sin pasar calor. El vuelo es largo y el primer día no lleva nada más.\nDía 2 · Salida temprano hacia el Caribe, con el desayuno en ruta, hasta el embarcadero donde empieza el recorrido en lancha por los canales. A Tortuguero no llega carretera: se entra por agua o en avioneta, y eso explica cómo está. Por la tarde, el pueblo, con sus casas de colores entre los canales, y el trabajo de conservación de las tortugas marinas que vienen a desovar cada año.\nDía 3 · Tortuguero a primera hora, cuando bajan los aulladores y el canal está quieto. Se navegan los caños pequeños del parque, que es donde se ve de verdad: dos mil especies de plantas, más de cuatrocientas de aves, monos, perezosos, caimanes y tortugas. Tarde con los biólogos de la estación. De julio a septiembre, y por la noche, se puede salir a ver el desove, que es la razón por la que existe este sitio.\nDía 4 · Vuelta en lancha hasta el muelle y continuación por tierra hacia Guápiles y el Arenal. Estuvo cuarenta y dos años en erupción continua, de 1968 a 2010, y lo decimos antes de que nadie reserve: lava ya no hay. Lo que hay es un cono casi perfecto, un bosque que no se seca nunca y las termales calentadas por el propio volcán, que es como se acaba el día.\nDía 5 · Mañana de puentes colgantes por las faldas del volcán, cruzando a la altura de las copas, que es donde viven los tucanes, los monos y los perezosos. El naturalista va delante con el telescopio y se anda despacio. Por la tarde, las cuevas del Venado, ocho cámaras que abrió un río subterráneo en la caliza y que se recorren con casco, linterna y los pies en el agua. Es opcional: hay tramos estrechos.\nDía 6 · Carretera a Monteverde, por la montaña. El bosque nuboso se recorre por arriba, entre las copas y con la niebla entrando por el collado, y se busca el quetzal, que baja a los aguacatillos entre febrero y julio. No se promete: se madruga, se espera con el guía y algunas mañanas aparece. Aquí llueve o chispea casi cualquier día del año, y eso es justo lo que lo mantiene así.\nDía 7 · Vuelo corto a bahía Drake, en la península de Osa, y entrada en lancha hasta el alojamiento, metido dentro del bosque. Se cambia de país sin salir de él: aquí el Pacífico sur es húmedo, cerrado y sin una sola torre en toda la costa.\nDía 8 · Corcovado, día completo por la estación Sirena, con guía certificado, que allí es obligatorio, y cupo diario. El parque protege ocho hábitats distintos y tiene la mayor riqueza silvestre del país: bosque primario y secundario, monos araña, congos y capuchinos, perezosos, pizotes y árboles de más de cien años. National Geographic lo describió como el lugar biológicamente más intenso de la Tierra, y la caminata se nota.\nDía 9 · Isla del Caño, a tres cuartos de hora en bote: una reserva biológica cubierta de bosque húmedo en estado virgen, con quince especies de coral y de las mejores visibilidades del Pacífico costarricense. Se hace snorkel y no se toca nada, que el fondo está vivo. Quien prefiera quedarse tiene la mañana libre en la playa.\nDía 10 · Traslado en bote y por tierra hasta la pista de Palmar Sur, vuelo doméstico a San José y vuelo de vuelta.",
     "imagen": "/costa-rica/costarica-tucan.jpg",
     "categoria": "naturaleza",
     "disponible": true,
     "createdAt": "2026-09-10T23:51:53.699Z",
-    "updatedAt": "2026-09-12T12:28:01.836Z",
-    "__v": 0
+    "updatedAt": "2026-10-04T18:49:15.419Z",
+    "__v": 0,
+    "plazas": 8
   },
   {
     "_id": "6aa347b1eac3700834a5d345",
     "nombre": "India, de Delhi al Ganges",
     "descripcion": "Once días de norte a este. Agra al amanecer, con el mármol todavía frío y sin una sola cola, y Benarés al final, que es donde el viaje se te queda pegado.",
-    "destino": "Norte de la India",
+    "destino": "India",
     "precio": 2320,
     "duracionDias": 11,
-    "itinerario": "Día 1 · Vuelo a Delhi.\nDía 2 · Delhi. La vieja y la nueva, en rickshaw y en metro.\nDía 3 · Samode y Jaipur, la ciudad rosa.\nDía 4 · Jaipur. Amber, el observatorio y los tintoreros del bazar.\nDía 5 · Fatehpur Sikri, la ciudad que se abandonó por falta de agua. Continuación a Agra.\nDía 6 · El Taj Mahal a las seis de la mañana. Por la tarde, el fuerte rojo.\nDía 7 · Jhansi, Orchha y Khajuraho.\nDía 8 · Los templos de Khajuraho y vuelo a Benarés.\nDía 9 · Benarés. Los ghats al amanecer desde una barca y el aarti de la tarde.\nDía 10 · Vuelo de regreso vía Delhi.\nDía 11 · Llegada.",
+    "itinerario": "Día 1 · Vuelo a Delhi. Se llega a última hora de la noche o de madrugada, así que el primer día no lleva nada escrito: traslado al hotel y dormir. El desfase son tres horas y media por delante, que se nota menos que a la vuelta.\nDía 2 · Delhi, la vieja y la nueva en el mismo día, que es la manera de entender la ciudad. Por la mañana la Jama Masjid y Chandni Chowk, que no admite coche y se recorre en rickshaw y después a pie. Raj Ghat, donde se incineró a Gandhi, y la panorámica de la Delhi colonial: la Puerta de la India, el Parlamento y los edificios oficiales. Por la tarde el Qutub Minar, el pozo escalonado de Agrasen ki Baoli y el templo sij de Bangla Sahib, donde se come a diario y gratis para miles de personas.\nDía 3 · Salida por carretera hacia Jaipur, doscientos sesenta kilómetros y unas cinco horas, con parada en Samode. El pueblo vive de los estampadores de tela y de los brazaletes de vidrio, y dentro de las murallas está el palacio, con pinturas murales de trescientos años y la sala Durbar forrada de espejo. Se come allí. Llegada a Jaipur a media tarde y ceremonia de aarti en el templo de Birla, con la luz cayendo.\nDía 4 · Jaipur. El fuerte Amber, levantado entre los siglos XVI y XVIII sobre el lago Maota, con la subida y la bajada en jeep por la rampa empedrada. Después el Palacio de la Ciudad, del XVII, con sus patios y sus sucesivas estancias, y el Jantar Mantar, el observatorio astronómico de obra que Jai Singh II construyó entre 1728 y 1734 y que sigue midiendo la hora con una sombra. Parada frente al Hawa Mahal, que mira al este y por eso se fotografía por la mañana, y paseo por los mercados.\nDía 5 · Jaipur a Agra, doscientos treinta y seis kilómetros y unas seis horas, parando en Fatehpur Sikri. Akbar la levantó entera en arenisca roja y la capital duró catorce años: se abandonó por falta de agua y por eso se la llama la ciudad fantasma. Patrimonio Mundial desde 1986. Por la tarde, ya en Agra, se cruza el río hasta el mirador de la otra orilla, que es donde el Taj Mahal se ve sin cola y con la luz de frente.\nDía 6 · El Taj Mahal a las seis de la mañana, antes de desayunar, con el mármol todavía frío y la piedra cambiando de color según sube el sol. Se vuelve al hotel a desayunar y después se anda la parte vieja de la ciudad y el Fuerte de Agra, de arenisca roja, desde cuyas estancias altas Shah Jahan veía el mausoleo que había mandado construir. Tarde libre.\nDía 7 · Traslado a la estación y tren hasta Jhansi, y de ahí ciento setenta y seis kilómetros por carretera hasta Khajuraho, con parada en Orchha. A orillas del Betwa están los palacios y los templos que levantaron los bundela en los siglos XVI y XVII, con el Jahangir Mahal construido para una visita del emperador que, dice la tradición, duró una sola noche. Llegada a Khajuraho al final del día.\nDía 8 · Los templos de Khajuraho por la mañana, que son de los mejores ejemplos de arquitectura de templo del norte de la India: de los ochenta y cinco que llegó a tener el conjunto quedan unos veinte, levantados por la dinastía Chandela entre los siglos X y XI. Patrimonio Mundial desde 1986. Por la tarde, salida hacia Benarés.\nDía 9 · Benarés. Al amanecer se sale en barca por el Ganges para ver los baños de purificación y las ofrendas en los ghats, y después se recorre a pie la orilla. A diez kilómetros está Sarnath, donde Buda dio su primer sermón, con el museo arqueológico y el Dhamek Stupa. Al caer la tarde se vuelve al río, en rickshaw, para el aarti del Dashashwamedh: los sacerdotes mueven a la vez las lámparas de fuego y se oye desde el agua. Depende del nivel del río.\nDía 10 · Vuelo de Benarés a Delhi y enlace con el vuelo de vuelta, que sale de madrugada. Entre los dos hay tiempo de sobra y cambio de terminal. Noche a bordo.\nDía 11 · Llegada a España por la mañana, con el cambio de hora en contra y la sensación de haber estado fuera mucho más de once días.",
     "imagen": "/india/india-mov.jpg",
     "categoria": "cultural",
     "disponible": true,
     "createdAt": "2026-09-11T00:13:37.618Z",
-    "updatedAt": "2026-09-12T12:28:01.539Z",
-    "__v": 0
+    "updatedAt": "2026-10-04T18:49:15.344Z",
+    "__v": 0,
+    "plazas": 8
   },
   {
     "_id": "6aa3494133e01ecd7c7d6390",
@@ -97,8 +103,9 @@
     "categoria": "naturaleza",
     "disponible": true,
     "createdAt": "2026-09-11T00:20:17.100Z",
-    "updatedAt": "2026-09-12T12:28:01.212Z",
-    "__v": 0
+    "updatedAt": "2026-10-05T08:59:20.655Z",
+    "__v": 0,
+    "plazas": 8
   },
   {
     "_id": "6aa3e44164a59e5cd297fdd1",
@@ -112,8 +119,9 @@
     "categoria": "desierto",
     "disponible": true,
     "createdAt": "2026-09-11T11:21:37.110Z",
-    "updatedAt": "2026-09-12T12:28:00.943Z",
-    "__v": 0
+    "updatedAt": "2026-10-05T08:59:20.680Z",
+    "__v": 0,
+    "plazas": 8
   },
   {
     "_id": "6aa6c069ce73fb7c6f296c0f",
@@ -125,7 +133,9 @@
     "duracionDias": 7,
     "itinerario": "Día 1 · Vuelo a Pisa o Génova y tren regional hasta Monterosso al Mare, el único de los cinco con playa de verdad y el más llano, que por eso es la base. Tarde de reconocimiento por el casco viejo y el paseo de Fegina, y primera cena de anchoas de Monterosso, que tienen su propia denominación.\nDía 2 · Levanto y Punta Mesco, la entrada por la puerta de atrás. Se sube al promontorio que cierra el parque por el norte, con las ruinas de la ermita de Sant’Antonio arriba y los cinco pueblos alineados abajo. Unas cuatro horas de ida y vuelta. Tarde libre en la playa.\nDía 3 · El tramo abierto del Sentiero Azzurro: Monterosso a Vernazza, 3,5 kilómetros y unas dos horas de subidas y bajadas entre bancales, con la escalera de piedra seca que sostiene la ladera desde hace ochocientos años. Vernazza tiene el único puerto natural de los cinco y la iglesia de Santa Margarita con los pies en el agua. Se sigue a Corniglia y se sube la Lardarina, 382 escalones, o el autobús.\nDía 4 · Manarola y Riomaggiore. El sendero de costa entre los dos sigue cortado desde 2012, así que se rodea por Volastra, por arriba, entre viñas. Por la tarde, la Via dell’Amore, reabierta en 2024 con reserva de franja horaria y sentido único desde Riomaggiore: veinte minutos colgados sobre el agua. Cata de Sciacchetrà, el vino dulce de bancal que se hace aquí desde el siglo XIII.\nDía 5 · Santuario de Montenero, a 340 metros sobre Riomaggiore, con los cinco pueblos de una sola vista. Traslado al golfo de La Spezia y llegada a Portovenere: la iglesia de San Pedro en el filo de la roca, el castillo Doria y la gruta de Byron.\nDía 6 · Día de barco por el golfo de los Poetas: la isla Palmaria y la del Tino, la costa de Lerici y el castillo de San Terenzo. Se come pescado en el puerto y se vuelve por la tarde.\nDía 7 · Mañana libre en Portovenere y regreso desde Pisa o Génova.",
     "precio": 2980,
-    "imagen": "/italia-amalfi/cinqueterre-riomaggiore.jpg"
+    "imagen": "/italia-amalfi/cinqueterre-riomaggiore.jpg",
+    "plazas": 8,
+    "updatedAt": "2026-10-05T08:59:20.710Z"
   },
   {
     "_id": "6aa6c069ce73fb7c6f296c10",
@@ -137,7 +147,9 @@
     "duracionDias": 9,
     "itinerario": "Día 1 · Llegada a Florencia y primera tarde a pie por el centro: la plaza de la Signoria, el Ponte Vecchio y el barrio de Santa Croce. Cena de bistecca alla fiorentina, que se pide al peso y poco hecha, porque así se sirve.\nDía 2 · Florencia de manual, con hora reservada: la cúpula de Brunelleschi, cerrada en 1436 sin cimbra y todavía la mayor de fábrica del mundo, 463 escalones; el Baptisterio con las puertas de Ghiberti; y la Accademia, donde está el David. Tarde en Santa Maria Novella.\nDía 3 · Uffizi a primera hora, con el Nacimiento de Venus y la Primavera, y después el Oltrarno: los talleres de artesanía de Santo Spirito, el Palacio Pitti y el jardín de Boboli. Puesta de sol desde San Miniato al Monte, que está por encima del Piazzale Michelangelo y tiene menos gente.\nDía 4 · El Chianti Classico camino del sur. Cosme III delimitó la zona en 1716, de las primeras denominaciones del mundo, y de ahí viene el gallo negro del cuello. Visita a una bodega con cata y comida, y llegada a San Gimignano por la tarde, cuando ya se han ido los autocares.\nDía 5 · San Gimignano de mañana temprano, con las catorce torres que quedan de las setenta y dos que hubo, y después Volterra: la muralla etrusca, el teatro romano y un taller de alabastro, que se sigue trabajando a torno. Traslado a la Val d’Orcia.\nDía 6 · Montalcino y la abadía de Sant’Antimo, románica del siglo XII, en mitad de un valle de olivos. Cata de Brunello, que no sale al mercado hasta cinco años después de la vendimia, y tarde libre entre viñas.\nDía 7 · Pienza, que Pío II mandó rehacer entera en 1459 como ciudad ideal del Renacimiento, con el pecorino que se cura en cuevas de toba, y Montepulciano, con el Vino Nobile y el templo de San Biagio a los pies del pueblo.\nDía 8 · La Val d’Orcia por dentro, que es Patrimonio Mundial desde 2004 como paisaje cultural: Bagno Vignoni y su plaza convertida en piscina termal, los cipreses de San Quirico y el camino de la Foce. Por la tarde, llegada a Siena.\nDía 9 · Siena de mañana: la plaza del Campo, la catedral y su pavimento de mármol taraceado, y la fachada inacabada del Duomo Nuovo, que la peste de 1348 dejó a medias. Regreso desde Florencia.",
     "precio": 3390,
-    "imagen": "/toscana/florencia.jpg"
+    "imagen": "/toscana/florencia.jpg",
+    "plazas": 8,
+    "updatedAt": "2026-10-05T08:59:20.736Z"
   },
   {
     "_id": "6aa6c069ce73fb7c6f296c11",
@@ -148,7 +160,10 @@
     "disponible": true,
     "duracionDias": 12,
     "itinerario": "Día 1 · Vuelo a Ankara vía Estambul y primera noche en la capital.\nDía 2 · Ankara entera: el Anıtkabir, el mausoleo de Atatürk levantado entre 1944 y 1953, al que se entra por una avenida de leones hititas, y el Museo de las Civilizaciones de Anatolia, que guarda lo que se sacó de Çatalhöyük y de Hattusa. Nueve mil años en dos plantas.\nDía 3 · Ruta a Capadocia con parada en la ciudad subterránea de Saratlı: siete pisos estimados, tres visitables, cuarenta salas y las puertas de piedra que se hacían rodar desde dentro. Llegada a Uçhisar y noche en hotel cueva.\nDía 4 · Museo al aire libre de Göreme con guía, y las iglesias rupestres que conservan los frescos del siglo XI. Por la tarde, el Valle de Devrent y la puesta de sol desde la fortaleza de Uçhisar. Globo al amanecer si el viento lo permite, y si no, se intenta otro día: por eso hay cuatro noches aquí.\nDía 5 · El Valle de Ihlara: catorce kilómetros de garganta junto al río, con iglesias excavadas en las paredes. Se andan los siete del tramo central, en bajada, y se come en Belisırma, a pie de agua.\nDía 6 · Capadocia a pie y sin coche: el Valle Rosa y el Valle de las Palomas al atardecer, un taller de cerámica en Avanos, donde se trabaja el barro del Kızılırmak desde época hitita, y tarde libre.\nDía 7 · Vuelo de Kayseri a Esmirna, una hora y cuarenta, que sustituye las ocho horas y media de autocar que hace el circuito clásico. Traslado a Pamukkale y primera tarde en las terrazas, cuando ya han bajado los grupos.\nDía 8 · Hierápolis por la mañana, con su teatro y la necrópolis de más de dos kilómetros, y bajada por las terrazas descalzos, que es obligatorio para no rayar el travertino. Ruta a Esmirna.\nDía 9 · Éfeso entrando por la puerta alta para bajar andando: la calle de los Curetes, la biblioteca de Celso del año 117 y las casas adosadas con sus mosaicos. Tarde en Şirince y regreso a Esmirna.\nDía 10 · Esmirna de mañana: el ágora romana, el bazar de Kemeraltı, abierto desde el siglo XVII, y el paseo del Kordon. Por la tarde, ruta al norte con parada en Pérgamo y su acrópolis colgada.\nDía 11 · Troya y el museo que abrió en 2018, un cubo de acero oxidado medio enterrado que explica el yacimiento mejor que el yacimiento mismo: nueve ciudades superpuestas, excavadas desde 1871. Por la tarde, Çanakkale y los Dardanelos, y traslado a Bursa cruzando el mar de Mármara en ferry.\nDía 12 · Bursa por la mañana, la primera capital otomana: la Mezquita Verde, el mercado de la seda y, a diez kilómetros, Cumalıkızık, un pueblo otomano de adobe y madera que entró en la lista de la UNESCO en 2014. Por la tarde, Estambul: Santa Sofía y la Mezquita Azul, el vapor de línea cruzando el Cuerno de Oro y cena en Sultanahmet antes del vuelo de regreso.",
-    "precio": 3690
+    "precio": 3690,
+    "imagen": "/turquia/estambul-noche.jpg",
+    "plazas": 8,
+    "updatedAt": "2026-10-04T18:49:00.847Z"
   },
   {
     "_id": "6aa6c069ce73fb7c6f296c12",
@@ -159,7 +174,10 @@
     "disponible": true,
     "duracionDias": 14,
     "itinerario": "Día 1 · Llegada a Nueva York y primera tarde a pie por Midtown, con el vapor saliendo del asfalto de la red que calienta media ciudad desde 1882. Cena temprana, que el desfase se paga.\nDía 2 · Downtown: el memorial del 11-S con las dos huellas de Michael Arad, Wall Street y el ferry de Staten Island, que es gratis y da la mejor vista de la bahía. Tarde en el Lower East Side con el Tenement Museum, una casa de vecinos de 1863 conservada tal cual.\nDía 3 · Ellis Island y la Estatua de la Libertad, con pase de pedestal reservado. Por esa isla pasaron más de doce millones de personas entre 1892 y 1954. Tarde en Chelsea: la High Line entera y el Whitney.\nDía 4 · Central Park de norte a sur, a pie y en barca de remos, y uno de los museos de la Quinta Avenida. Al final del día, Harlem: el Apollo, las casas de Strivers Row y, si es domingo, misa de gospel.\nDía 5 · Brooklyn y Queens, que es el distrito con más diversidad lingüística del mundo: Dumbo, Williamsburg, comida en Jackson Heights y vuelta a pie por el puente de Brooklyn al atardecer.\nDía 6 · Coney Island en metro, una hora larga que merece la pena: el paseo de tablas, la noria de 1920 y el puesto de perritos que abrió en 1916. Times Square de noche, una vez.\nDía 7 · Tren o vuelo corto a Washington D. C. Tarde en el National Mall: tres kilómetros y medio en línea recta del Capitolio al Lincoln Memorial, con el obelisco de 169 metros en medio.\nDía 8 · La zona institucional con guía: el Capitolio por dentro, con pase reservado, y la Casa Blanca desde la verja del Ellipse. Por la tarde, dos museos del Smithsonian, que son gratuitos: el del Aire y el Espacio y el de Historia Afroamericana.\nDía 9 · Lincoln Memorial al amanecer, con el estanque en calma, y los memoriales de Vietnam, Corea y Martin Luther King. Por la tarde, el cementerio de Arlington. Vuelo a Miami.\nDía 10 · Miami Beach: el South Beach Art Deco District, más de ochocientos edificios de los años treinta protegidos desde 1979, el conjunto art déco más denso del mundo. Se recorre de mañana a pie y se vuelve al anochecer, cuando encienden los neones.\nDía 11 · Little Havana y la Calle Ocho: el parque del dominó, las ventanitas de café y una fábrica de puros donde se sigue liando a mano. Por la tarde, Wynwood y sus muros, que se repintan cada año.\nDía 12 · Salida en barco por la bahía de Biscayne, que es como se entiende la ciudad, y tarde de playa. Vuelo nocturno a Los Ángeles.\nDía 13 · Los Ángeles: el Griffith Observatory por la mañana, con la ciudad entera debajo y el cartel de Hollywood enfrente, y el Getty por la tarde. Atardecer en Venice Beach.\nDía 14 · Última mañana en Santa Monica y vuelo de regreso.",
-    "precio": 5450
+    "precio": 5450,
+    "imagen": "/estados-unidos/miami-playa.jpg",
+    "plazas": 8,
+    "updatedAt": "2026-10-04T18:49:00.789Z"
   },
   {
     "_id": "6aa6c069ce73fb7c6f296c13",
@@ -170,6 +188,9 @@
     "disponible": true,
     "duracionDias": 9,
     "itinerario": "Día 1 · Llegada a Atenas y paseo sin prisa por Plaka, Anafiotika, que levantaron los canteros de Anafi al pie de la Acrópolis, Monastiraki y el Ágora Antigua. Cena en una terraza de Psirí con la Acrópolis iluminada enfrente.\nDía 2 · Acrópolis a la apertura, a las ocho, que es la única hora sin calor y sin cola: Partenón, Erecteión y el Teatro de Dioniso. Después el Museo de la Acrópolis, donde están cinco de las seis cariátides originales. Por la tarde, el Templo de Zeus Olímpico y el Estadio Panatenaico, y el atardecer desde el Areópago o el Licabeto.\nDía 3 · Salto a Milos en ferry rápido, unas dos horas y media, o en vuelo de cincuenta minutos. Llegada a Adamas y subida a Plaka, la capital, colgada a 220 metros. El Kastro veneciano del siglo XIII al atardecer y cena allí arriba.\nDía 4 · La costa norte de Milos: Sarakiniko, ceniza volcánica blanqueada por el sol y la sal hasta parecer otro planeta; Papafragas y sus canales entre paredes; el yacimiento de Filakopi; Pollonia para comer pescado; y Firopotamos y Plathiena al final de la tarde. Coche o quad, que la isla se recorre así.\nDía 5 · Día de mar: la costa sur en barco hasta Kleftiko, donde los farallones y las cuevas servían de escondite a los piratas, de donde viene el nombre. Se entra en las grutas y se hace snorkel dentro. No hay carretera que llegue. Si sopla el meltemi se cambia por el día 4. Tarde en Klima, la fila de syrmata pintados a pie de agua.\nDía 6 · Ferry rápido a Santorini, una hora y cincuenta. Paseo del borde de la caldera de Fira a Firostefani e Imerovigli, poco más de una hora andando con el volcán siempre a la izquierda.\nDía 7 · Oía: las iglesias de cúpulas azules, el castillo y la bajada de trescientos escalones a Ammoudi Bay, donde se come pescado con los pies casi en el agua. Se sube otra vez para el atardecer.\nDía 8 · La otra Santorini. Akrotiri por la mañana, la ciudad de la Edad del Bronce sepultada por la erupción, con sus casas de varias plantas y su red de saneamiento, bajo cubierta y sin sol. Después Pyrgos, Megalochori y Emporio, pueblos de tierra adentro donde no para ningún autocar, una bodega de Assyrtiko con las viñas conducidas en cesto a ras de suelo, y la playa negra de Perissa. Cena de despedida.\nDía 9 · Vuelo de regreso desde Santorini, sin volver a Atenas.",
-    "precio": 3150
+    "precio": 3150,
+    "imagen": "/grecia/grecia-santorini.jpg",
+    "plazas": 8,
+    "updatedAt": "2026-10-04T18:49:00.723Z"
   }
 ]

@@ -11,6 +11,7 @@
     "portadas": "node scripts/portadas.js",
     "itinerarios": "node scripts/itinerarios.js",
     "polinesia": "node scripts/polinesia.js",
+    "plazas": "node scripts/plazas.js",
     "probar": "node scripts/probar.js"
   },
   "dependencies": {
