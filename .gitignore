@@ -4,3 +4,6 @@ node_modules/
 npm-debug.log*
 .vercel
 *.zip
+
+# Duplicados que crea macOS al copiar dos veces un archivo: «package-lock 2.json».
+* [0-9].*
